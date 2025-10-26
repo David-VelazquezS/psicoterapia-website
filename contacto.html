@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Psicoterapia Profesional</title>
+    <meta name="description" content="Contáctanos para comenzar tu proceso de terapia. Terapeutas con Maestría y Doctorado en CDMX, Michoacán, Xalapa y online.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="main.html">Psicoterapia</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="main.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="como-funciona.html">Cómo Funciona</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="page-hero">
+        <div class="container">
+            <h1>Estamos Aquí para Escucharte</h1>
+            <p class="page-subtitle">El primer paso hacia tu bienestar emocional comienza con una conversación</p>
+        </div>
+    </header>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods-section">
+        <div class="container">
+            <h2>Elige tu Medio Preferido</h2>
+            <div class="contact-methods-grid">
+                <div class="contact-method-card">
+                    <div class="method-icon">📞</div>
+                    <h3>Llamada Telefónica</h3>
+                    <p>Habla directamente con nosotros para resolver tus dudas y agendar tu primera cita.</p>
+                    <a href="tel:+525532321599" class="btn btn-primary method-btn">
+                        📞 Llamar Ahora
+                    </a>
+                    <div class="contact-info">
+                        <strong>+52 55 3232 1599</strong>
+                        <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-method-card">
+                    <div class="method-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Escríbenos por WhatsApp para una comunicación rápida y conveniente.</p>
+                    <a href="https://wa.me/525532321599" class="btn btn-whatsapp method-btn" target="_blank">
+                        💬 Enviar WhatsApp
+                    </a>
+                    <div class="contact-info">
+                        <strong>Mismo número</strong>
+                        <p>Respuesta en menos de 2 horas</p>
+                    </div>
+                </div>
+
+                <div class="contact-method-card">
+                    <div class="method-icon">✉️</div>
+                    <h3>Correo Electrónico</h3>
+                    <p>Envíanos un correo detallado y te responderemos en un máximo de 24 horas.</p>
+                    <a href="mailto:elizabeth_ocampocas@gmail.com" class="btn btn-secondary method-btn">
+                        ✉️ Enviar Correo
+                    </a>
+                    <div class="contact-info">
+                        <strong>correodelaclinca@laclinica.com</strong>
+                        <p>Respuesta en 24 horas máximo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-info">
+                    <h2>¿Prefieres que te Contactemos?</h2>
+                    <p>Completa este formulario y nos pondremos en contacto contigo para programar tu consulta inicial sin costo.</p>
+                    
+                    <div class="form-benefits">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✅</span>
+                            <div>
+                                <strong>Consulta inicial sin costo</strong>
+                                <p>15 minutos para conocerte y resolver tus dudas</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🎯</span>
+                            <div>
+                                <strong>Asesoramiento personalizado</strong>
+                                <p>Te orientamos sobre el mejor enfoque para tu situación</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">📅</span>
+                            <div>
+                                <strong>Agendamiento flexible</strong>
+                                <p>Encuentramos el horario que mejor se adapte a tu agenda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="mainContactForm">
+                    <h3>Solicitar Contacto</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edad">Edad</label>
+                            <input type="number" id="edad" name="edad" min="18" max="100">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ubicacion">¿Dónde te encuentras? *</label>
+                        <select id="ubicacion" name="ubicacion" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="CDMX">Ciudad de México</option>
+                            <option value="Michoacan">Michoacán</option>
+                            <option value="Xalapa">Xalapa</option>
+                            <option value="Online">Sesión Online</option>
+                            <option value="otro">Otra ubicación</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_consulta">¿Qué tipo de consulta te interesa? *</label>
+                        <select id="tipo_consulta" name="tipo_consulta" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="individual">Terapia Individual</option>
+                            <option value="adolescentes">Terapia para Adolescentes</option>
+                            <option value="ninos">Terapia para Niños</option>
+                            <option value="evaluacion">Evaluación Inicial</option>
+                            <option value="dudas">Solo tengo dudas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Cuéntanos brevemente qué te trae a terapia *</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Por ejemplo: Estoy experimentando ansiedad, problemas de relación, necesito manejar el estrés..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferencia_contacto">¿Cómo prefieres que te contactemos? *</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="preferencia_contacto" value="whatsapp" checked>
+                                <span class="checkmark"></span>
+                                WhatsApp
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="preferencia_contacto" value="llamada">
+                                <span class="checkmark"></span>
+                                Llamada telefónica
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="preferencia_contacto" value="email">
+                                <span class="checkmark"></span>
+                                Correo electrónico
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        ✨ Solicitar Contacto
+                    </button>
+
+                    <p class="form-note">
+                        Al enviar este formulario, aceptas nuestra <a href="#">Política de Privacidad</a>. 
+                        Tus datos están seguros y confidenciales.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations-section">
+        <div class="container">
+            <h2>Nuestras Ubicaciones</h2>
+            <div class="locations-grid">
+              <div class="location-card">
+                <div class="location-icon">💻</div>
+                  <h3>Sesión Online</h3>
+                  <p>Terapia desde la comodidad de tu hogar</p>
+                    <div class="location-details">
+                      <strong>Plataforma:</strong> Google Workspace<br>
+                      <strong>Seguridad:</strong> Encriptado end-to-end<br>
+                      <strong>Disponibilidad:</strong> Todo México
+                    </div>
+              </div>
+                <div class="location-card">
+                    <div class="location-icon">🏙️</div>
+                    <h3>Ciudad de México</h3>
+                    <p>Consultorio en zona tranquila</p>
+                    <div class="location-details">
+                        <strong>Zona:</strong> CDMX Sur<br>
+                        <strong>Tren Ligero:</strong>Xomali<br>
+                        <strong>Estacionamiento:</strong> Disponible
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-icon">🌄</div>
+                    <h3>Michoacán</h3>
+                    <p>Atención en Morelia y zonas aledañas</p>
+                    <div class="location-details">
+                        <strong>Ciudad:</strong> Morelia<br>
+                        <strong>Zona:</strong> Zona Brenda<br>
+                        <strong>Acceso:</strong> Fácil transporte público
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-icon">🏞️</div>
+                    <h3>Xalapa</h3>
+                    <p>Consultorio en corazón de Veracruz</p>
+                    <div class="location-details">
+                        <strong>Zona:</strong> Zona Betsy<br>
+                        <strong>Clima:</strong> Agradable y tranquilo<br>
+                        <strong>Ambiente:</strong> Relajado y natural
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="emergency-section">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-icon">🚨</div>
+                <div class="emergency-text">
+                    <h2>¿Situación de Emergencia?</h2>
+                    <p>Si estás experimentando una crisis emocional o pensamientos de daño hacia ti mismo o otros, contacta inmediatamente a los servicios de emergencia:</p>
+                    <div class="emergency-contacts">
+                        <div class="emergency-contact">
+                            <strong>Línea de la Vida</strong>
+                            <p>800 911 2000</p>
+                        </div>
+                        <div class="emergency-contact">
+                            <strong>Emergencias</strong>
+                            <p>911</p>
+                        </div>
+                        <div class="emergency-contact">
+                            <strong>UNAM</strong>
+                            <p>55 5025 0855</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Psicoterapia Profesional</strong> - Terapeutas con Maestría y Doctorado</p>
+            <p>© 2025 Psicoterapia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/525532321599" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        💬
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu functionality
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+                
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
+                    });
+                });
+            }
+
+            // Contact form handling
+            const contactForm = document.getElementById('mainContactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simple form validation
+                    const nombre = document.getElementById('nombre').value;
+                    const email = document.getElementById('email').value;
+                    const telefono = document.getElementById('telefono').value;
+                    
+                    if (nombre && email && telefono) {
+                        // Show success message
+                        alert(`¡Gracias ${nombre}! Hemos recibido tu solicitud. Te contactaremos dentro de las próximas 24 horas en el método que seleccionaste.`);
+                        
+                        // Reset form
+                        contactForm.reset();
+                    } else {
+                        alert('Por favor completa todos los campos obligatorios (*)');
+                    }
+                });
+            }
+
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

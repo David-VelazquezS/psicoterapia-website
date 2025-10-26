@@ -2052,3 +2052,400 @@ body {
         font-size: 1.8rem;
     }
 }
+
+/*Contact*/
+
+/* Contact Methods Section */
+.contact-methods-section {
+    padding: 80px 20px;
+    background: var(--white);
+}
+
+.contact-methods-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--charcoal);
+    font-weight: 300;
+}
+
+.contact-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-method-card {
+    background: var(--cream);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--taupe-light);
+    transition: transform 0.3s ease;
+}
+
+.contact-method-card:hover {
+    transform: translateY(-5px);
+}
+
+.method-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-method-card h3 {
+    color: var(--sage-dark);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.contact-method-card p {
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.method-btn {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--taupe-light);
+}
+
+.contact-info strong {
+    color: var(--sage-dark);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 80px 20px;
+    background: var(--cream);
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.form-info h2 {
+    color: var(--sage-dark);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.form-info p {
+    color: var(--charcoal);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.form-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.benefit-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.benefit-item strong {
+    color: var(--sage-dark);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.benefit-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+    color: var(--sage-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--taupe);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--sage);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.form-note {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    opacity: 0.7;
+}
+
+.form-note a {
+    color: var(--sage-dark);
+    text-decoration: none;
+}
+
+.form-note a:hover {
+    text-decoration: underline;
+}
+
+/* Locations Section */
+.locations-section {
+    padding: 80px 20px;
+    background: var(--white);
+}
+
+.locations-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--charcoal);
+    font-weight: 300;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.location-card {
+    background: var(--cream);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--taupe-light);
+}
+
+.location-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.location-card h3 {
+    color: var(--sage-dark);
+    margin-bottom: 0.5rem;
+}
+
+.location-card p {
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.location-details {
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    opacity: 0.8;
+}
+
+.location-details strong {
+    color: var(--sage-dark);
+}
+
+/* Emergency Section */
+.emergency-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ffe6e6 0%, #ffcccc 100%);
+    border-top: 3px solid #ff6b6b;
+}
+
+.emergency-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.emergency-icon {
+    font-size: 4rem;
+    flex-shrink: 0;
+}
+
+.emergency-text h2 {
+    color: #d63031;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.emergency-text p {
+    color: #636e72;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.emergency-contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.emergency-contact {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.emergency-contact strong {
+    color: #d63031;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.emergency-contact p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* WhatsApp Button Style */
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    border: none;
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .contact-methods-grid,
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .emergency-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .emergency-contacts {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-method-card,
+    .location-card {
+        padding: 25px 20px;
+    }
+    
+    .method-icon {
+        font-size: 2.5rem;
+    }
+}
