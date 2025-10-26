@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Salud Mental | Psicoterapia Profesional</title>
+    <meta name="description" content="Artículos especializados en salud mental, ansiedad, relaciones y bienestar emocional. Consejos de nuestras doctoras en psicoanálisis.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">Psicoterapia</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="como-funciona.html">Cómo Funciona</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="page-hero">
+        <div class="container">
+            <h1>Blog de Salud Mental</h1>
+            <p class="page-subtitle">Recursos, artículos y reflexiones para tu bienestar emocional</p>
+        </div>
+    </header>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <h2>Explora por Temas</h2>
+            <div class="categories-filter">
+                <button class="category-btn active" data-category="all">Todos los Artículos</button>
+                <button class="category-btn" data-category="ansiedad">Ansiedad y Estrés</button>
+                <button class="category-btn" data-category="relaciones">Relaciones</button>
+                <button class="category-btn" data-category="autoestima">Autoestima</button>
+                <button class="category-btn" data-category="crecimiento">Crecimiento Personal</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post">
+        <div class="container">
+            <div class="featured-card">
+                <div class="featured-content">
+                    <span class="post-category ansiedad">Ansiedad y Estrés</span>
+                    <h2>5 Señales de que la Ansiedad Está Afectando tu Vida Diaria</h2>
+                    <p class="post-excerpt">La ansiedad puede manifestarse de maneras sutiles que a menudo pasamos por alto. Aprende a identificar estas señales y cuándo buscar ayuda profesional.</p>
+                    <div class="post-meta">
+                        <span class="post-date">15 Enero, 2024</span>
+                        <span class="post-read-time">📖 5 min lectura</span>
+                    </div>
+                    <a href="#ansiedad-articulo" class="btn btn-primary">Leer Artículo Completo</a>
+                </div>
+                <div class="featured-image">
+                    <div class="placeholder-image">🖼️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-grid">
+                
+                <!-- Post 1 -->
+                <article class="post-card" data-category="relaciones">
+                    <div class="post-header">
+                        <span class="post-category relaciones">Relaciones</span>
+                        <h3>Cómo Establecer Límites Saludables en tus Relaciones</h3>
+                    </div>
+                    <div class="post-excerpt">
+                        <p>Aprender a decir "no" y establecer límites claros es fundamental para relaciones saludables. Descubre estrategias prácticas para implementar en tu vida diaria.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="post-date">12 Enero, 2024</span>
+                        <span class="post-read-time">📖 4 min lectura</span>
+                    </div>
+                    <a href="#" class="read-more">Leer más →</a>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post-card" data-category="autoestima">
+                    <div class="post-header">
+                        <span class="post-category autoestima">Autoestima</span>
+                        <h3>El Diálogo Interno: Transforma tu Crítica en Compasión</h3>
+                    </div>
+                    <div class="post-excerpt">
+                        <p>La forma en que te hablas a ti mismo impacta directamente tu autoestima. Aprende técnicas para convertir la autocrítica en un diálogo más compasivo y constructivo.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="post-date">8 Enero, 2024</span>
+                        <span class="post-read-time">📖 6 min lectura</span>
+                    </div>
+                    <a href="#" class="read-more">Leer más →</a>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="post-card" data-category="crecimiento">
+                    <div class="post-header">
+                        <span class="post-category crecimiento">Crecimiento Personal</span>
+                        <h3>¿Qué es el Crecimiento Postraumático?</h3>
+                    </div>
+                    <div class="post-excerpt">
+                        <p>Más allá de sobrevivir al trauma, existe la posibilidad de crecer a través de él. Explora el concepto de crecimiento postraumático y cómo puede transformar tu vida.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="post-date">5 Enero, 2024</span>
+                        <span class="post-read-time">📖 7 min lectura</span>
+                    </div>
+                    <a href="#" class="read-more">Leer más →</a>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="post-card" data-category="ansiedad">
+                    <div class="post-header">
+                        <span class="post-category ansiedad">Ansiedad y Estrés</span>
+                        <h3>Técnicas de Respiración para Momentos de Crisis</h3>
+                    </div>
+                    <div class="post-excerpt">
+                        <p>Cuando la ansiedad se intensifica, estas técnicas simples de respiración pueden ayudarte a recuperar el control. Métodos prácticos para implementar inmediatamente.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="post-date">2 Enero, 2024</span>
+                        <span class="post-read-time">📖 3 min lectura</span>
+                    </div>
+                    <a href="#" class="read-more">Leer más →</a>
+                </article>
+
+                <!-- Post 5 -->
+                <article class="post-card" data-category="relaciones">
+                    <div class="post-header">
+                        <span class="post-category relaciones">Relaciones</span>
+                        <h3>La Comunicación Asertiva: Más Allá de lo que Decimos</h3>
+                    </div>
+                    <div class="post-excerpt">
+                        <p>La comunicación efectiva va más allá de las palabras. Descubre cómo el lenguaje corporal, tono de voz y timing impactan la calidad de tus interacciones.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="post-date">28 Diciembre, 2023</span>
+                        <span class="post-read-time">📖 5 min lectura</span>
+                    </div>
+                    <a href="#" class="read-more">Leer más →</a>
+                </article>
+
+                <!-- Post 6 -->
+                <article class="post-card" data-category="autoestima">
+                    <div class="post-header">
+                        <span class="post-category autoestima">Autoestima</span>
+                        <h3>Rompiendo el Ciclo de la Comparación Constante</h3>
+                    </div>
+                    <div class="post-excerpt">
+                        <p>Vivir comparándote con otros puede erosionar tu autoestima. Estrategias para liberarte de esta trampa mental y enfocarte en tu propio camino.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="post-date">25 Diciembre, 2023</span>
+                        <span class="post-read-time">📖 4 min lectura</span>
+                    </div>
+                    <a href="#" class="read-more">Leer más →</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>¿Te interesa el bienestar emocional?</h2>
+                <p>Suscríbete para recibir artículos exclusivos y recursos de salud mental directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="tu.email@ejemplo.com" required>
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                </form>
+                <p class="privacy-note">Respetamos tu privacidad. Puedes darte de baja en cualquier momento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Psicoterapia Profesional</strong> - Terapeutas con Maestría y Doctorado</p>
+            <p>© 2025 Psicoterapia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/525532321599" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        💬
+    </a>
+
+    <script>
+        // Blog Category Filter
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const postCards = document.querySelectorAll('.post-card');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Filter posts
+                    postCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Mobile menu functionality
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+                
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
+                    });
+                });
+            }
+
+            // Newsletter form handling
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    alert(`¡Gracias por suscribirte con ${email}! Te enviaremos recursos valiosos pronto.`);
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
