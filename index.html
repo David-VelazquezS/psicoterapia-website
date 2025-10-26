@@ -3,327 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicoterapia | Terapeutas con Maestría y Doctorado | CDMX</title>
-    <meta name="description" content="Terapeutas certificados con Maestría y Doctorado. Terapia para adultos, adolescentes y niños. Atención profesional en CDMX. +52 55 3232 1599">
-    <meta name="keywords" content="psicoterapia, terapeutas CDMX, terapia adultos, terapia adolescentes, terapia niños, psicólogo, salud mental, maestría, doctorado">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Psicoterapia",
-      "description": "Servicios profesionales de salud mental con terapeutas certificados con Maestría y Doctorado",
-      "url": "https://david-velazquezs.github.io/psicoterapia-website/",
-      "telephone": "+52-55-3232-1599",
-      "email": "elizabeth_ocampocas@gmail.com",
-      "areaServed": "CDMX",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios de Psicoterapia",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Terapia para Adultos"
+    <title>Psicoterapia | Terapeutas con Maestría y Doctorado</title>
+    <meta name="description" content="Terapeutas certificados con Maestría y Doctorado. Atención profesional en CDMX, Michoacán y Xalapa.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #f5f1e8;
+            color: #5d4037;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        /* Logo Screen Styles */
+        #logo-screen {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #b8c9a9 0%, #87a96b 100%);
+            cursor: pointer;
+            transition: opacity 1.5s ease, transform 1.5s ease;
+        }
+        
+        .logo-container {
+            max-width: 500px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.5s ease;
+        }
+        
+        .logo-container:hover {
+            transform: scale(1.02);
+        }
+        
+        .logo-text {
+            margin-top: 30px;
+            color: #2f4f4f;
+            font-size: 24px;
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeIn 2s ease 1s forwards;
+        }
+        
+        .credentials {
+            margin-top: 15px;
+            color: #2f4f4f;
+            font-size: 18px;
+            opacity: 0;
+            animation: fadeIn 2s ease 1.5s forwards;
+        }
+        
+        .click-instruction {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #2f4f4f;
+            opacity: 0;
+            animation: fadeIn 2s ease 2.5s forwards;
+            font-style: italic;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo-container {
+                max-width: 90%;
+                transform: scale(0.8);
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Terapia para Adolescentes"
+            
+            .logo-text {
+                font-size: 20px;
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Terapia para Niños"
+            
+            .credentials {
+                font-size: 16px;
             }
-          }
-        ]
-      }
-    }
-    </script>
+        }
+    </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-<nav class="navbar">
-    <div class="container">
-        <div class="nav-brand">
-            <a href="index.html">Psicoterapia</a>
-        </div>
-        
-        <!-- Mobile menu button -->
-        <div class="nav-toggle" id="navToggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        
-        <!-- Navigation Menu -->
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-            <li><a href="como-funciona.html">Cómo Funciona</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
-            <li><a href="#contacto" class="nav-cta">Contacto</a></li>
-        </ul>
-    </div>
-</nav>
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <h1>Psicoterapia Profesional</h1>
-            <p class="credentials">Terapeutas Certificados con <strong>Maestría y Doctorado</strong></p>
-            <p class="specialties">Atención especializada para adultos, adolescentes y niños</p>
-            
-            <div class="cta-buttons">
-                <a href="tel:+525532321599" class="btn btn-primary">
-                    📞 Llamar Ahora
-                </a>
-                <a href="#contacto" class="email-focus btn btn-secondary">
-                    ✉️ Escríbenos por correo
-                </a>
-            </div>
-        </div>
-    </header>
-<!-- Trust Section -->
-<section class="trust">
-    <div class="container">
-        <div class="trust-content">
-            <h2>Confianza y Experiencia</h2>
-            <p class="trust-statement">Nos respaldan <strong>más de diez años de experiencia</strong> en consultorio, formación constante y trabajo en equipo. Somos una comunidad profesional comprometida con tu bienestar, trabajando con <strong>responsabilidad, esmero y ética intachable</strong>.</p>
-            <div class="trust-badges">
-                <span>🎓 Formación Continua</span>
-                <span>🫱🏽‍🫲🏼 Trabajo en Equipo</span>
-                <span>⭐ Ética Profesional</span>
-            </div>
-        </div>
-    </div>
-</section>
-   <!-- Services Section -->
-<section class="services" id="servicios">
-    <div class="container">
-        <h2>Nuestras Especialidades</h2>
-        <div class="services-grid">
-            <!-- Adult Therapy Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="service-icon">🌿</div>
-                        <h3>Terapia para Adultos</h3>
-                        <p class="flip-hint">↻ Más información</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Terapia Adultos</h3>
-                        <p>Atención personalizada para:</p>
-                        <ul>
-                            <li>Ansiedad y estrés</li>
-                            <li>Depresión</li>
-                            <li>Problemas de relación</li>
-                            <li>Crisis existenciales</li>
-                            <li>Manejo emocional</li>
-                        </ul>
-                        <div class="back-icon">🌳</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Teen Therapy Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="service-icon">🧭</div>
-                        <h3>Terapia para Adolescentes</h3>
-                        <p class="flip-hint">↻ Más información</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Terapia Adolescentes</h3>
-                        <p>Apoyo especializado en:</p>
-                        <ul>
-                            <li>Identidad y autoestima</li>
-                            <li>Presión académica</li>
-                            <li>Relaciones sociales</li>
-                            <li>Manejo de emociones</li>
-                            <li>Transición a la adultez</li>
-                        </ul>
-                        <div class="back-icon">🌟</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Child Therapy Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="service-icon">🐣</div>
-                        <h3>Terapia para Niños</h3>
-                        <p class="flip-hint">↻ Más información</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Terapia Niños</h3>
-                        <p>Cuidado profesional para:</p>
-                        <ul>
-                            <li>Desarrollo emocional</li>
-                            <li>Problemas de comportamiento</li>
-                            <li>Ansiedad escolar</li>
-                            <li>Habilidades sociales</li>
-                            <li>Apoyo familiar</li>
-                        </ul>
-                        <div class="back-icon">🐥</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Estamos aquí para ayudarte</h3>
+    <!-- Logo Screen -->
+    <div id="logo-screen">
+        <div class="logo-container" id="logo-click-area">
+            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Organic background representing growth and healing -->
+                <defs>
+                    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" stop-color="#e8f5e8" />
+                        <stop offset="100%" stop-color="#b8c9a9" />
+                    </radialGradient>
                     
-                    <div class="contact-methods">
-                        <a href="tel:+525532321599" class="contact-link">
-                            📞 Llámanos
-                        </a>
-                        <a href="https://wa.me/525532321599" class="contact-link">
-                            💬 Envíanos un WhatsApp
-                        </a>
-                        <a href="#contactForm" class="contact-link email-focus" class="contact-link">
-                            ✉️ Contáctanos por correo-e
-                        </a>
-                    </div>
-                </div>
+                    <filter id="organicTexture" x="0" y="0" width="100%" height="100%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+                        <feColorMatrix in="noise" type="saturate" values="0.1" result="coloredNoise" />
+                        <feBlend in="SourceGraphic" in2="coloredNoise" mode="multiply" />
+                    </filter>
+                </defs>
                 
-                <form class="contact-form" id="contactForm">
-                    <h3>Envíanos un mensaje</h3>
-                    <div class="form-group">
-                        <label for="nombre">Nombre *</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
+                <!-- Background with organic texture -->
+                <rect width="400" height="400" fill="url(#bgGradient)" filter="url(#organicTexture)" />
+                
+                <!-- Central element: Abstract representation of growth and support -->
+                <g transform="translate(200, 200)">
+                    <!-- Layered circles representing therapeutic support -->
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="#6b8e23" stroke-width="2" opacity="0.7">
+                        <animate attributeName="r" values="80;85;80" dur="8s" repeatCount="indefinite" />
+                    </circle>
                     
-                    <div class="form-group">
-                        <label for="email">Correo electrónico *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+                    <circle cx="0" cy="0" r="60" fill="none" stroke="#87a96b" stroke-width="2" opacity="0.7">
+                        <animate attributeName="r" values="60;65;60" dur="6s" repeatCount="indefinite" />
+                    </circle>
                     
-                    <div class="form-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono">
-                    </div>
+                    <circle cx="0" cy="0" r="40" fill="none" stroke="#b8c9a9" stroke-width="2" opacity="0.7">
+                        <animate attributeName="r" values="40;45;40" dur="4s" repeatCount="indefinite" />
+                    </circle>
                     
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje *</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
-                    </div>
+                    <!-- Central element: Growing plant representing personal growth -->
+                    <path d="M -15,-30 L 0,-50 L 15,-30 L 10,20 L -10,20 Z" 
+                          fill="#2f4f4f" opacity="0.8" 
+                          transform="rotate(0)">
+                        <animateTransform attributeName="transform" type="rotate" 
+                                          values="0;5;0;-5;0" dur="10s" 
+                                          repeatCount="indefinite" />
+                    </path>
                     
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                </form>
-            </div>
+                    <!-- Branches representing support and guidance -->
+                    <path d="M -25,0 Q -40,-15 -35,-30" 
+                          fill="none" stroke="#4a6b3d" stroke-width="2" />
+                    <path d="M 25,0 Q 40,-15 35,-30" 
+                          fill="none" stroke="#4a6b3d" stroke-width="2" />
+                    <path d="M -15,20 Q -30,35 -10,45" 
+                          fill="none" stroke="#4a6b3d" stroke-width="2" />
+                    <path d="M 15,20 Q 30,35 10,45" 
+                          fill="none" stroke="#4a6b3d" stroke-width="2" />
+                    
+                    <!-- Flower representing breakthrough and insight -->
+                    <g transform="translate(0, -55)">
+                        <circle cx="0" cy="0" r="8" fill="#e57373" opacity="0.8">
+                            <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite" />
+                        </circle>
+                        <path d="M -8,0 Q 0,-10 8,0 Q 0,10 -8,0" 
+                              fill="#ffab91" opacity="0.7" />
+                    </g>
+                    
+                    <!-- Subtle therapeutic pattern elements -->
+                    <g transform="rotate(45)">
+                        <rect x="-5" y="-70" width="10" height="15" fill="#6b8e23" opacity="0.6" />
+                        <rect x="-5" y="-45" width="10" height="15" fill="#87a96b" opacity="0.6" />
+                        <rect x="-5" y="-20" width="10" height="15" fill="#b8c9a9" opacity="0.6" />
+                    </g>
+                    
+                    <g transform="rotate(-45)">
+                        <rect x="-5" y="-70" width="10" height="15" fill="#6b8e23" opacity="0.6" />
+                        <rect x="-5" y="-45" width="10" height="15" fill="#87a96b" opacity="0.6" />
+                        <rect x="-5" y="-20" width="10" height="15" fill="#b8c9a9" opacity="0.6" />
+                    </g>
+                </g>
+                
+                <!-- Text elements aligned with your brand -->
+                <text x="200" y="320" text-anchor="middle" font-family="Georgia" font-size="28" fill="#2f4f4f" opacity="0.9">
+                    <tspan x="200" dy="0">Psicoterapia</tspan>
+                    <tspan x="200" dy="30" font-size="20" opacity="0.8">Profesional</tspan>
+                </text>
+                
+                <!-- Subtle decorative elements -->
+                <path d="M 50,50 Q 100,30 150,50" fill="none" stroke="#6b8e23" stroke-width="1" opacity="0.4" />
+                <path d="M 250,50 Q 300,30 350,50" fill="none" stroke="#6b8e23" stroke-width="1" opacity="0.4" />
+                <path d="M 50,350 Q 100,370 150,350" fill="none" stroke="#6b8e23" stroke-width="1" opacity="0.4" />
+                <path d="M 250,350 Q 300,370 350,350" fill="none" stroke="#6b8e23" stroke-width="1" opacity="0.4" />
+            </svg>
+            
+            <div class="logo-text">Tu bienestar emocional es nuestra prioridad</div>
+            <div class="credentials">Terapeutas con Maestría y Doctorado</div>
+            <div class="click-instruction">Haz clic para comenzar</div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p><strong>Psicoterapia Profesional</strong> - Terapeutas con Maestría y Doctorado</p>
-            <p>© 2025 Psicoterapia. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    </div>
 
     <script>
-        // Simple form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Gracias por tu mensaje. Te contactaremos pronto.');
-            this.reset();
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoScreen = document.getElementById('logo-screen');
+            const logoClickArea = document.getElementById('logo-click-area');
+            
+            function redirectToMainSite() {
+                // Add fade-out animation
+                logoScreen.style.opacity = '0';
+                logoScreen.style.transform = 'scale(1.1)';
+                
+                // Redirect after fade out
+                setTimeout(function() {
+                    window.location.href = 'main.html';
+                }, 1000);
+            }
+            
+            // Add click event to logo
+            logoClickArea.addEventListener('click', redirectToMainSite);
+            
+            // Auto-redirect after 8 seconds
+            setTimeout(function() {
+                if (window.location.href.indexOf('main.html') === -1) {
+                    redirectToMainSite();
+                }
+            }, 8000);
         });
     </script>
-    <script>
-    // Mobile menu functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-        
-        if (navToggle && navMenu) {
-            navToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                navToggle.classList.toggle('active');
-            });
-            
-            // Close menu when clicking on links
-            const navLinks = document.querySelectorAll('.nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    navToggle.classList.remove('active');
-                });
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.navbar') && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    navToggle.classList.remove('active');
-                }
-            });
-        }
-    });
-</script>
-    <script>
-    // Mobile flip card functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const flipCards = document.querySelectorAll('.flip-card');
-        
-        flipCards.forEach(card => {
-            // For mobile touch devices
-            if ('ontouchstart' in window) {
-                card.addEventListener('click', function() {
-                    this.classList.toggle('flipped');
-                });
-            }
-        });
-    });
-</script>
-<script>
-    // Focus on form when email link is clicked
-    document.addEventListener('DOMContentLoaded', function() {
-        const emailLink = document.querySelector('.email-focus');
-        const contactForm = document.getElementById('contactForm');
-        
-        if (emailLink && contactForm) {
-            emailLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Smooth scroll to form
-                contactForm.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'center'
-                });
-                
-                // Small delay then focus on first input
-                setTimeout(() => {
-                    const firstInput = contactForm.querySelector('input, textarea');
-                    if (firstInput) {
-                        firstInput.focus();
-                    }
-                }, 500);
-            });
-        }
-    });
-</script>
-<!-- Fixed WhatsApp Button -->
-<a href="https://wa.me/525532321599" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-    💬
-</a>
 </body>
 </html>
