@@ -446,8 +446,12 @@ body {
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+/* Only apply the hover-driven flip on devices that actually support hover (desktop).
+   Touch devices will rely on the `.flipped` class which the JS toggles on click. */
+@media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
 }
 
 .flip-card-front, .flip-card-back {
