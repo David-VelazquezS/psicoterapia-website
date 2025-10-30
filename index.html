@@ -203,81 +203,104 @@
         
         <!-- Logo Container -->
         <div class="logo-container" id="logo-click-area">
-            <!-- Replace the previous SVG with a new, commercial mark -->
-            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Psicoterapia">
-                <title>Psicoterapia — logotipo</title>
-                <desc>Marca abstracta profesional en tonos teal con acento coral.</desc>
+            <!-- New SVG: outlined profile made of golden branches with leaves -->
+            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Psicoterapia — perfil de rostro hecho de ramas doradas">
+                <title>Psicoterapia — Perfil dorado</title>
                 <defs>
-                    <!-- Primary brand gradient -->
-                    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#0fb39b"/>
-                        <stop offset="100%" stop-color="#0b7a88"/>
+                    <!-- warm gold gradient -->
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#D4AF37"/>
+                        <stop offset="55%" stop-color="#FFD76B"/>
+                        <stop offset="100%" stop-color="#F4C95D"/>
                     </linearGradient>
 
-                    <!-- Coral accent gradient -->
-                    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#ff8a6b"/>
-                        <stop offset="100%" stop-color="#ff6b52"/>
+                    <!-- soft highlight for leaves -->
+                    <linearGradient id="leafShine" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fff9e6" stop-opacity="0.9"/>
+                        <stop offset="100%" stop-color="#ffd76b" stop-opacity="0.6"/>
                     </linearGradient>
 
-                    <!-- Soft inset gloss -->
-                    <radialGradient id="gloss" cx="30%" cy="25%" r="60%">
-                        <stop offset="0%" stop-color="rgba(255,255,255,0.9)"/>
-                        <stop offset="60%" stop-color="rgba(255,255,255,0.22)"/>
-                        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-                    </radialGradient>
-
-                    <!-- Drop shadow for the mark -->
-                    <filter id="softDrop" x="-40%" y="-40%" width="180%" height="180%">
-                        <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#072626" flood-opacity="0.12"/>
+                    <!-- gentle drop shadow -->
+                    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+                        <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.12"/>
                     </filter>
 
-                    <!-- Subtle inner texture for depth -->
-                    <filter id="grain" x="0" y="0" width="100%" height="100%">
-                        <feTurbulence baseFrequency="0.8" numOctaves="1" stitchTiles="stitch" result="t"/>
-                        <feColorMatrix type="saturate" values="0" in="t" result="mono"/>
-                        <feBlend in="SourceGraphic" in2="mono" mode="overlay"/>
+                    <!-- slight inner glow -->
+                    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+                        <feGaussianBlur stdDeviation="6" result="blur"/>
+                        <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
                     </filter>
                 </defs>
 
-                <!-- Circular badge background to improve legibility on varied backgrounds -->
+                <!-- circular subtle backdrop for contrast -->
                 <g transform="translate(200,200)">
-                    <circle cx="0" cy="0" r="160" fill="url(#brandGrad)" opacity="0.98" filter="url(#grain)"/>
-                    
-                    <!-- Soft gloss on the circle -->
-                    <circle cx="-22" cy="-42" r="110" fill="url(#gloss)" opacity="0.14"/>
-
-                    <!-- Main abstract 'P' mark:
-                         - A strong vertical stem and a rounded, open bowl suggesting progression/path.
-                         - Drawn as a thick stroked path for good scalability and recognizability. -->
-                    <path d="M -40 70 V -70 H 10 A58 58 0 1 0 -40 -8"
-                          fill="none"
-                          stroke="url(#gloss)" stroke-width="0" /> <!-- placeholder to keep structure -->
-
-                    <!-- Visible stroked 'P' -->
-                    <path d="M -40 70 V -70 H 10 A58 58 0 1 0 -40 -8"
-                          fill="none"
-                          stroke="url(#brandGrad)"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="34"
-                          opacity="0.98"
-                          filter="url(#softDrop)"/>
-
-                    <!-- Accent coral dot / beacon to suggest focus and human warmth -->
-                    <circle cx="78" cy="-18" r="12" fill="url(#accentGrad)" opacity="0.98" filter="url(#softDrop)">
-                        <animate attributeName="r" values="12;14;12" dur="3.6s" repeatCount="indefinite"/>
-                    </circle>
-
-                    <!-- Secondary subtle outline to add depth (very light) -->
-                    <path d="M -40 70 V -70 H 10 A58 58 0 1 0 -40 -8"
-                          fill="none"
-                          stroke="rgba(255,255,255,0.06)"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="4"
-                          opacity="0.9"/>
+                    <circle r="160" fill="rgba(255,250,240,0.95)" />
+                    <circle r="120" fill="none" stroke="rgba(212,175,55,0.06)" stroke-width="10"/>
                 </g>
+
+                <!-- main profile built from a branch-like stroke -->
+                <g filter="url(#softShadow)" transform="translate(0,0)">
+                    <!-- branch-stroke forming the profile silhouette -->
+                    <path d="M130 260
+                             Q140 220 155 200
+                             Q170 180 190 170
+                             Q215 160 235 162
+                             Q255 164 270 178
+                             Q282 190 282 210
+                             Q282 235 270 252
+                             Q250 270 220 280
+                             Q190 288 160 280
+                             Q140 275 130 260"
+                          fill="none"
+                          stroke="url(#goldGrad)"
+                          stroke-width="18"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          opacity="0.98"
+                          filter="url(#glow)"/>
+
+                    <!-- secondary thinner branch for interior detail -->
+                    <path d="M160 250
+                             Q170 230 185 215
+                             Q200 200 220 196"
+                          fill="none"
+                          stroke="rgba(212,175,55,0.9)"
+                          stroke-width="8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          opacity="0.95"/>
+
+                    <!-- Leaves placed along the branches (varying rotation) -->
+                    <g fill="url(#leafShine)" stroke="rgba(180,120,20,0.25)" stroke-width="0.6" opacity="0.98">
+                        <ellipse cx="150" cy="232" rx="10" ry="5" transform="rotate(-20 150 232)"/>
+                        <ellipse cx="170" cy="215" rx="12" ry="6" transform="rotate(-10 170 215)"/>
+                        <ellipse cx="190" cy="198" rx="11" ry="5" transform="rotate(8 190 198)"/>
+                        <ellipse cx="220" cy="191" rx="9" ry="4" transform="rotate(18 220 191)"/>
+                        <ellipse cx="255" cy="175" rx="11" ry="5" transform="rotate(32 255 175)"/>
+                        <ellipse cx="268" cy="198" rx="8" ry="4" transform="rotate(50 268 198)"/>
+                        <ellipse cx="240" cy="240" rx="10" ry="5" transform="rotate(110 240 240)"/>
+                        <ellipse cx="205" cy="260" rx="9" ry="4" transform="rotate(140 205 260)"/>
+                        <ellipse cx="160" cy="270" rx="8" ry="4" transform="rotate(165 160 270)"/>
+                    </g>
+
+                    <!-- small accent buds to add warmth -->
+                    <g opacity="0.95">
+                        <circle cx="274" cy="182" r="4.2" fill="#FFB88C"/>
+                        <circle cx="238" cy="246" r="3.2" fill="#FFDCA8"/>
+                    </g>
+                </g>
+
+                <!-- micro animation: very subtle pulse on leaves to give life -->
+                <animateTransform xlink:href="#"
+                                  attributeName="transform"
+                                  type="scale"
+                                  values="1;1.005;1"
+                                  dur="4s"
+                                  repeatCount="indefinite"
+                                  begin="0s"/>
             </svg>
             
             <div class="logo-text">Psicoterapia</div>
