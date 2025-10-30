@@ -203,9 +203,9 @@
         
         <!-- Logo Container -->
         <div class="logo-container" id="logo-click-area">
-            <!-- New SVG: clear human profile made of golden branches with leaves (reads as a face, not a circle) -->
-            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Psicoterapia — perfil rostro en ramas doradas con hojas">
-                <title>Psicoterapia — Perfil en ramas doradas</title>
+            <!-- Improved SVG: Clear sideways face profile made of golden branches with leaves -->
+            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Psicoterapia — perfil rostro lateral en ramas doradas con hojas">
+                <title>Psicoterapia — Perfil lateral en ramas doradas</title>
                 <defs>
                     <linearGradient id="goldMain" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#C69C33"/>
@@ -240,92 +240,116 @@
                 </g>
 
                 <g filter="url(#softDrop)">
-                    <!-- Outer profile silhouette formed by a single flowing branch stroke -->
-                    <path d="M126 160
-                             Q144 120 184 108    /* forehead */
-                             Q206 102 230 110    /* temple */
-                             Q248 118 260 138    /* upper cheek */
-                             Q266 152 264 168    /* nose bridge */
-                             Q256 178 244 182    /* nose tip */
-                             Q232 184 222 180    /* philtrum / upper lip */
-                             Q232 196 225 208    /* lower lip */
-                             Q216 222 204 238    /* chin */
-                             Q190 258 168 274    /* jaw to neck */
-                             Q152 288 136 292"   /* base of neck */
+                    <!-- Clear sideways face profile with distinct facial features -->
+                    <!-- Forehead to nose -->
+                    <path d="M140 160
+                             Q160 120 200 110
+                             Q240 100 260 120
+                             Q270 140 268 160" 
                           fill="none"
                           stroke="url(#goldMain)"
-                          stroke-width="18"
+                          stroke-width="14"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           opacity="0.99"/>
-
+                    
+                    <!-- Nose to chin -->
+                    <path d="M268 160
+                             Q266 180 250 200
+                             Q230 220 200 230
+                             Q170 240 140 230"
+                          fill="none"
+                          stroke="url(#goldMain)"
+                          stroke-width="14"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          opacity="0.99"/>
+                    
+                    <!-- Lips curve -->
+                    <path d="M250 200
+                             Q240 210 220 215"
+                          fill="none"
+                          stroke="url(#goldMain)"
+                          stroke-width="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          opacity="0.99"/>
+                    
+                    <!-- Neck -->
+                    <path d="M140 230
+                             Q130 250 140 270"
+                          fill="none"
+                          stroke="url(#goldMain)"
+                          stroke-width="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          opacity="0.99"/>
+                    
                     <!-- Highlight ridge to suggest beveled gold -->
-                    <path d="M130 156
-                             Q148 118 188 106
-                             Q210 100 234 108
-                             Q252 116 264 134
-                             Q270 148 268 164
-                             Q260 174 248 178
-                             Q236 182 226 178
-                             Q236 192 229 204
-                             Q220 218 208 234
-                             Q193 254 170 270"
+                    <path d="M142 158
+                             Q162 118 202 108
+                             Q242 98 262 118
+                             Q272 138 270 158
+                             Q268 178 252 198
+                             Q232 218 202 228
+                             Q172 238 142 228
+                             Q132 248 142 268"
                           fill="none"
                           stroke="url(#goldSheen)"
-                          stroke-width="8"
+                          stroke-width="6"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           opacity="0.7"/>
 
-                    <!-- Inner delicate branch details (suggest bone/structure & flow) -->
-                    <path d="M170 210
-                             Q176 196 188 184
-                             Q202 172 218 168"
+                    <!-- Branch details that follow facial structure -->
+                    <path d="M180 180
+                             Q190 170 210 165"
                           fill="none"
                           stroke="rgba(166,121,36,0.92)"
-                          stroke-width="7"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"/>
-
-                    <!-- small branching offshoots (hair/temple) -->
-                    <path d="M150 140
-                             Q138 120 120 112"
-                          fill="none"
-                          stroke="rgba(166,121,36,0.9)"
                           stroke-width="6"
                           stroke-linecap="round"
                           stroke-linejoin="round"/>
-                    <path d="M200 110
-                             Q216 96 236 92"
+                    
+                    <path d="M220 190
+                             Q210 200 190 205"
                           fill="none"
-                          stroke="rgba(166,121,36,0.85)"
-                          stroke-width="5"
+                          stroke="rgba(166,121,36,0.92)"
+                          stroke-width="6"
                           stroke-linecap="round"
                           stroke-linejoin="round"/>
-
-                    <!-- eye as a small leaf-shaped element -->
-                    <g transform="translate(232,150) rotate(-12)">
-                        <ellipse cx="0" cy="0" rx="9" ry="5.5" fill="url(#leafGrad)" stroke="rgba(80,60,28,0.14)" stroke-width="0.6"/>
+                    
+                    <!-- Eye as a leaf-shaped element -->
+                    <g transform="translate(240,170) rotate(-10)">
+                        <ellipse cx="0" cy="0" rx="8" ry="5" fill="url(#leafGrad)" stroke="rgba(80,60,28,0.14)" stroke-width="0.6"/>
                         <ellipse cx="-2" cy="-1.5" rx="3" ry="1.8" fill="rgba(255,255,255,0.25)" opacity="0.6"/>
                     </g>
-
-                    <!-- Leaves placed along key branch points -->
+                    
+                    <!-- Leaves placed along key facial points -->
                     <g fill="url(#leafGrad)" stroke="rgba(80,60,28,0.15)" stroke-width="0.7" opacity="0.98">
-                        <ellipse cx="154" cy="136" rx="11" ry="6" transform="rotate(-30 154 136)"/>
-                        <ellipse cx="178" cy="122" rx="9" ry="4.5" transform="rotate(-18 178 122)"/>
-                        <ellipse cx="204" cy="118" rx="10" ry="5" transform="rotate(-6 204 118)"/>
-                        <ellipse cx="242" cy="130" rx="12" ry="5.5" transform="rotate(6 242 130)"/>
-                        <ellipse cx="260" cy="150" rx="9" ry="4" transform="rotate(18 260 150)"/>
-                        <ellipse cx="268" cy="170" rx="8" ry="4" transform="rotate(36 268 170)"/>
-                        <ellipse cx="246" cy="206" rx="10" ry="5" transform="rotate(90 246 206)"/>
-                        <ellipse cx="214" cy="230" rx="9" ry="4" transform="rotate(120 214 230)"/>
-                        <ellipse cx="176" cy="250" rx="8" ry="4" transform="rotate(150 176 250)"/>
+                        <!-- Forehead leaves -->
+                        <ellipse cx="160" cy="140" rx="10" ry="5" transform="rotate(-30 160 140)"/>
+                        <ellipse cx="190" cy="125" rx="9" ry="4.5" transform="rotate(-15 190 125)"/>
+                        <ellipse cx="220" cy="120" rx="8" ry="4" transform="rotate(5 220 120)"/>
+                        
+                        <!-- Cheek leaves -->
+                        <ellipse cx="250" cy="150" rx="9" ry="4.5" transform="rotate(15 250 150)"/>
+                        <ellipse cx="260" cy="175" rx="8" ry="4" transform="rotate(25 260 175)"/>
+                        
+                        <!-- Jawline leaves -->
+                        <ellipse cx="240" cy="200" rx="7" ry="3.5" transform="rotate(45 240 200)"/>
+                        <ellipse cx="220" cy="220" rx="8" ry="4" transform="rotate(60 220 220)"/>
+                        <ellipse cx="190" cy="230" rx="9" ry="4.5" transform="rotate(75 190 230)"/>
+                        <ellipse cx="160" cy="235" rx="8" ry="4" transform="rotate(90 160 235)"/>
+                        
+                        <!-- Neck leaves -->
+                        <ellipse cx="145" cy="250" rx="7" ry="3.5" transform="rotate(110 145 250)"/>
                     </g>
 
                     <!-- tiny warm accents (buds) for human warmth -->
                     <g opacity="0.95">
-                        <circle cx="268" cy="168" r="3.6" fill="#FFB78F"/>
-                        <circle cx="232" cy="218" r="2.6" fill="#FFE1B8"/>
+                        <circle cx="265" cy="175" r="3" fill="#FFB78F"/>
+                        <circle cx="235" cy="205" r="2.5" fill="#FFE1B8"/>
+                        <circle cx="170" cy="180" r="2" fill="#FFE1B8"/>
                     </g>
                 </g>
 
