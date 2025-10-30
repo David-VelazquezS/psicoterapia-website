@@ -14,63 +14,22 @@
         }
         
         body {
-            background-color: #f5f5f0; /* --cream */
-            color: #2f4f4f; /* --charcoal */
+            background-color: #f5f5f0;
+            color: #2f4f4f;
             overflow-x: hidden;
             height: 100vh;
-            -webkit-font-smoothing:antialiased;
-            -moz-osx-font-smoothing:grayscale;
-        }
-        
-        /* Logo Screen Styles */
-        #logo-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            z-index: 1000;
-            transition: opacity 1.5s ease, transform 1.5s ease;
-            overflow: hidden;
         }
         
-        /* Background using your color palette */
-        .noise-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(184, 201, 169, 0.4) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(135, 169, 107, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(232, 217, 197, 0.2) 0%, transparent 50%),
-                linear-gradient(135deg, #f5f5f0 0%, #e8d9c5 100%);
-            z-index: -2;
-        }
-        
-        /* Animated noise texture */
-        .noise-texture {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
-            opacity: 0.3;
-            animation: noiseAnimation 8s infinite alternate;
-            z-index: -1;
-        }
-        
-        /* Make logo container look like a modern card */
         .logo-container {
-            max-width: 520px;
+            max-width: 600px;
+            width: 90%;
             text-align: center;
-            padding: 28px;
+            padding: 30px;
             cursor: pointer;
             transition: transform 0.45s cubic-bezier(.2,.9,.2,1), box-shadow 0.3s;
             z-index: 10;
@@ -86,41 +45,33 @@
             box-shadow: 0 26px 60px rgba(31,49,49,0.16);
         }
         
-        /* Wordmark: bolder, cleaner, more commercial */
         .logo-text {
             margin-top: 18px;
-            color: #163737; /* deeper charcoal-teal */
+            color: #163737;
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
             font-weight: 700;
             font-size: 22px;
             letter-spacing: 0.9px;
             text-transform: uppercase;
-            opacity: 0;
-            animation: fadeIn 1.6s ease 0.6s forwards;
         }
 
         .credentials {
             margin-top: 8px;
-            color: #2b7a66; /* teal-ish accent */
+            color: #2b7a66;
             font-size: 13px;
             font-weight: 600;
-            opacity: 0;
-            animation: fadeIn 1.6s ease 0.9s forwards;
         }
         
         .click-instruction {
             margin-top: 16px;
             font-size: 13px;
-            color: #87a96b; /* --sage */
-            opacity: 0;
-            animation: fadeIn 1.6s ease 1.2s forwards;
+            color: #87a96b;
         }
 
-        /* New CTA pill */
         .cta-button {
             display: inline-block;
             margin-top: 14px;
-            background: linear-gradient(180deg,#ffb58a 0%, #ff8f6a 100%); /* soft coral */
+            background: linear-gradient(180deg,#ffb58a 0%, #ff8f6a 100%);
             color: #092625;
             padding: 10px 22px;
             border-radius: 999px;
@@ -128,47 +79,12 @@
             font-size: 14px;
             box-shadow: 0 8px 18px rgba(255,140,100,0.18);
             cursor: pointer;
-            opacity: 0;
-            transform: translateY(6px);
-            animation: fadeIn 1.2s ease 1.4s forwards;
             transition: transform 0.18s ease, box-shadow 0.18s ease;
         }
 
-        .cta-button:active { transform: translateY(1px) scale(.995); box-shadow: 0 6px 12px rgba(255,140,100,0.14); }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from { 
-                opacity: 0; 
-                transform: translateY(10px); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
-            }
-        }
-        
-        @keyframes noiseAnimation {
-            0% {
-                transform: translate(0, 0) scale(1);
-                opacity: 0.2;
-            }
-            25% {
-                transform: translate(-2px, 1px) scale(1.01);
-                opacity: 0.3;
-            }
-            50% {
-                transform: translate(1px, -1px) scale(1);
-                opacity: 0.25;
-            }
-            75% {
-                transform: translate(-1px, 2px) scale(0.99);
-                opacity: 0.3;
-            }
-            100% {
-                transform: translate(0, 0) scale(1);
-                opacity: 0.2;
-            }
+        .cta-button:active { 
+            transform: translateY(1px) scale(.995); 
+            box-shadow: 0 6px 12px rgba(255,140,100,0.14); 
         }
         
         @keyframes float {
@@ -177,7 +93,6 @@
             100% { transform: translateY(0) rotate(0deg) scale(1); }
         }
         
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .logo-container {
                 max-width: 92%;
@@ -195,205 +110,276 @@
     </style>
 </head>
 <body>
-    <!-- Logo Screen -->
-    <div id="logo-screen">
-        <!-- Background with noise effect using your colors -->
-        <div class="noise-bg"></div>
-        <div class="noise-texture"></div>
-        
-        <!-- Logo Container -->
-        <div class="logo-container" id="logo-click-area">
-            <!-- Improved SVG: Clear sideways face profile made of golden branches with leaves -->
-            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Psicoterapia — perfil rostro lateral en ramas doradas con hojas">
-                <title>Psicoterapia — Perfil lateral en ramas doradas</title>
-                <defs>
-                    <linearGradient id="goldMain" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#C69C33"/>
-                        <stop offset="50%" stop-color="#E6C66A"/>
-                        <stop offset="100%" stop-color="#FFD87A"/>
-                    </linearGradient>
+    <!-- Logo Container -->
+    <div class="logo-container" id="logo-click-area">
+        <!-- Sophisticated golden branch face logo -->
+        <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Psicoterapia — rostro lateral formado por ramas doradas con hojas">
+            <title>Psicoterapia — Rostro en ramas doradas</title>
+            <defs>
+                <!-- Gold gradients -->
+                <linearGradient id="goldMain" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#C69C33"/>
+                    <stop offset="50%" stop-color="#E6C66A"/>
+                    <stop offset="100%" stop-color="#FFD87A"/>
+                </linearGradient>
+                
+                <linearGradient id="goldDark" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B6914"/>
+                    <stop offset="50%" stop-color="#B8860B"/>
+                    <stop offset="100%" stop-color="#DAA520"/>
+                </linearGradient>
+                
+                <linearGradient id="goldLight" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FFE87C"/>
+                    <stop offset="50%" stop-color="#FFD87A"/>
+                    <stop offset="100%" stop-color="#FFC125"/>
+                </linearGradient>
 
-                    <linearGradient id="goldSheen" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="rgba(255,255,255,0.9)"/>
-                        <stop offset="60%" stop-color="rgba(255,255,255,0.2)"/>
-                        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-                    </linearGradient>
+                <!-- Leaf gradients -->
+                <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#86B57B"/>
+                    <stop offset="100%" stop-color="#4A8F6B"/>
+                </linearGradient>
+                
+                <linearGradient id="leafLight" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#A8D5A5"/>
+                    <stop offset="100%" stop-color="#7BBF7A"/>
+                </linearGradient>
 
-                    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#86B57B"/>
-                        <stop offset="100%" stop-color="#4A8F6B"/>
-                    </linearGradient>
+                <!-- Filters -->
+                <filter id="softDrop" x="-50%" y="-50%" width="200%" height="200%">
+                    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.12"/>
+                </filter>
 
-                    <filter id="softDrop" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.12"/>
-                    </filter>
+                <filter id="innerGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+                    <feFlood flood-color="#FFE87C" flood-opacity="0.3" result="glow"/>
+                    <feComposite in="glow" in2="blur" operator="in" result="softGlow"/>
+                    <feMerge>
+                        <feMergeNode in="softGlow"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
 
-                    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
-                        <feGaussianBlur stdDeviation="4" result="b"/>
-                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-                    </filter>
-                </defs>
-
-                <!-- subtle circular ground for contrast -->
-                <g transform="translate(200,200)">
-                    <circle r="148" fill="rgba(255,250,245,0.96)"/>
-                </g>
-
-                <g filter="url(#softDrop)">
-                    <!-- Clear sideways face profile with distinct facial features -->
-                    <!-- Forehead to nose -->
-                    <path d="M140 160
-                             Q160 120 200 110
-                             Q240 100 260 120
-                             Q270 140 268 160" 
-                          fill="none"
-                          stroke="url(#goldMain)"
-                          stroke-width="14"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          opacity="0.99"/>
-                    
-                    <!-- Nose to chin -->
-                    <path d="M268 160
-                             Q266 180 250 200
-                             Q230 220 200 230
-                             Q170 240 140 230"
-                          fill="none"
-                          stroke="url(#goldMain)"
-                          stroke-width="14"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          opacity="0.99"/>
-                    
-                    <!-- Lips curve -->
-                    <path d="M250 200
-                             Q240 210 220 215"
-                          fill="none"
-                          stroke="url(#goldMain)"
-                          stroke-width="10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          opacity="0.99"/>
-                    
-                    <!-- Neck -->
-                    <path d="M140 230
-                             Q130 250 140 270"
-                          fill="none"
-                          stroke="url(#goldMain)"
-                          stroke-width="10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          opacity="0.99"/>
-                    
-                    <!-- Highlight ridge to suggest beveled gold -->
-                    <path d="M142 158
-                             Q162 118 202 108
-                             Q242 98 262 118
-                             Q272 138 270 158
-                             Q268 178 252 198
-                             Q232 218 202 228
-                             Q172 238 142 228
-                             Q132 248 142 268"
-                          fill="none"
-                          stroke="url(#goldSheen)"
-                          stroke-width="6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          opacity="0.7"/>
-
-                    <!-- Branch details that follow facial structure -->
-                    <path d="M180 180
-                             Q190 170 210 165"
-                          fill="none"
-                          stroke="rgba(166,121,36,0.92)"
-                          stroke-width="6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                    
-                    <path d="M220 190
-                             Q210 200 190 205"
-                          fill="none"
-                          stroke="rgba(166,121,36,0.92)"
-                          stroke-width="6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                    
-                    <!-- Eye as a leaf-shaped element -->
-                    <g transform="translate(240,170) rotate(-10)">
-                        <ellipse cx="0" cy="0" rx="8" ry="5" fill="url(#leafGrad)" stroke="rgba(80,60,28,0.14)" stroke-width="0.6"/>
-                        <ellipse cx="-2" cy="-1.5" rx="3" ry="1.8" fill="rgba(255,255,255,0.25)" opacity="0.6"/>
-                    </g>
-                    
-                    <!-- Leaves placed along key facial points -->
-                    <g fill="url(#leafGrad)" stroke="rgba(80,60,28,0.15)" stroke-width="0.7" opacity="0.98">
-                        <!-- Forehead leaves -->
-                        <ellipse cx="160" cy="140" rx="10" ry="5" transform="rotate(-30 160 140)"/>
-                        <ellipse cx="190" cy="125" rx="9" ry="4.5" transform="rotate(-15 190 125)"/>
-                        <ellipse cx="220" cy="120" rx="8" ry="4" transform="rotate(5 220 120)"/>
-                        
-                        <!-- Cheek leaves -->
-                        <ellipse cx="250" cy="150" rx="9" ry="4.5" transform="rotate(15 250 150)"/>
-                        <ellipse cx="260" cy="175" rx="8" ry="4" transform="rotate(25 260 175)"/>
-                        
-                        <!-- Jawline leaves -->
-                        <ellipse cx="240" cy="200" rx="7" ry="3.5" transform="rotate(45 240 200)"/>
-                        <ellipse cx="220" cy="220" rx="8" ry="4" transform="rotate(60 220 220)"/>
-                        <ellipse cx="190" cy="230" rx="9" ry="4.5" transform="rotate(75 190 230)"/>
-                        <ellipse cx="160" cy="235" rx="8" ry="4" transform="rotate(90 160 235)"/>
-                        
-                        <!-- Neck leaves -->
-                        <ellipse cx="145" cy="250" rx="7" ry="3.5" transform="rotate(110 145 250)"/>
-                    </g>
-
-                    <!-- tiny warm accents (buds) for human warmth -->
-                    <g opacity="0.95">
-                        <circle cx="265" cy="175" r="3" fill="#FFB78F"/>
-                        <circle cx="235" cy="205" r="2.5" fill="#FFE1B8"/>
-                        <circle cx="170" cy="180" r="2" fill="#FFE1B8"/>
-                    </g>
-                </g>
-
-                <!-- gentle living motion for the mark -->
-                <g id="markGroup">
-                    <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="4.6s" repeatCount="indefinite" />
-                </g>
-            </svg>
+            <!-- Background circle -->
+            <circle cx="200" cy="200" r="180" fill="rgba(255,250,245,0.96)"/>
             
-            <div class="logo-text">Psicoterapia</div>
-            <div class="credentials">Terapeutas con Maestría y Doctorado</div>
-            <div class="click-instruction">Haz clic para comenzar</div>
-            <div class="cta-button" id="cta-enter">Entrar</div>
-        </div>
+            <!-- Golden Branch Face -->
+            <g filter="url(#softDrop)">
+                <!-- Main face outline - formed by branches -->
+                <path d="M140 180 
+                         Q150 140 180 120 
+                         Q210 100 240 110 
+                         Q260 120 270 140 
+                         Q280 160 275 190 
+                         Q270 220 250 240 
+                         Q230 260 200 265 
+                         Q170 260 150 240 
+                         Q130 220 125 190 
+                         Z" 
+                      fill="none" 
+                      stroke="url(#goldMain)" 
+                      stroke-width="12" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round"/>
+                
+                <!-- Forehead branch detail -->
+                <path d="M160 140 
+                         Q175 125 195 120 
+                         Q215 115 235 125" 
+                      fill="none" 
+                      stroke="url(#goldDark)" 
+                      stroke-width="6" 
+                      stroke-linecap="round"/>
+                
+                <!-- Cheek branch detail -->
+                <path d="M250 160 
+                         Q240 180 220 190 
+                         Q200 200 180 195" 
+                      fill="none" 
+                      stroke="url(#goldDark)" 
+                      stroke-width="5" 
+                      stroke-linecap="round"/>
+                
+                <!-- Nose branch -->
+                <path d="M240 150 
+                         Q245 170 235 190 
+                         Q225 210 210 220" 
+                      fill="none" 
+                      stroke="url(#goldMain)" 
+                      stroke-width="7" 
+                      stroke-linecap="round"/>
+                
+                <!-- Eye area branch -->
+                <path d="M210 150 
+                         Q220 145 230 150 
+                         Q235 160 230 170" 
+                      fill="none" 
+                      stroke="url(#goldDark)" 
+                      stroke-width="4" 
+                      stroke-linecap="round"/>
+                
+                <!-- Jawline branch -->
+                <path d="M170 220 
+                         Q160 230 155 240 
+                         Q150 250 160 260" 
+                      fill="none" 
+                      stroke="url(#goldMain)" 
+                      stroke-width="6" 
+                      stroke-linecap="round"/>
+                
+                <!-- Chin branch -->
+                <path d="M200 250 
+                         Q190 255 185 260" 
+                      fill="none" 
+                      stroke="url(#goldDark)" 
+                      stroke-width="4" 
+                      stroke-linecap="round"/>
+                
+                <!-- Neck branch -->
+                <path d="M150 240 
+                         Q140 250 145 260 
+                         Q150 270 160 275" 
+                      fill="none" 
+                      stroke="url(#goldMain)" 
+                      stroke-width="5" 
+                      stroke-linecap="round"/>
+                
+                <!-- Hair/Head branch details -->
+                <path d="M130 170 
+                         Q120 150 130 130 
+                         Q140 110 160 100" 
+                      fill="none" 
+                      stroke="url(#goldDark)" 
+                      stroke-width="5" 
+                      stroke-linecap="round"/>
+                
+                <path d="M170 100 
+                         Q190 90 210 95 
+                         Q230 100 240 115" 
+                      fill="none" 
+                      stroke="url(#goldDark)" 
+                      stroke-width="4" 
+                      stroke-linecap="round"/>
+                
+                <!-- Inner face structure branches -->
+                <path d="M180 160 
+                         Q190 155 200 160 
+                         Q210 165 215 175" 
+                      fill="none" 
+                      stroke="url(#goldLight)" 
+                      stroke-width="3" 
+                      stroke-linecap="round"/>
+                
+                <path d="M190 180 
+                         Q200 185 210 180 
+                         Q215 175 210 170" 
+                      fill="none" 
+                      stroke="url(#goldLight)" 
+                      stroke-width="2" 
+                      stroke-linecap="round"/>
+                
+                <!-- Leaf clusters - positioned strategically to enhance facial features -->
+                <!-- Forehead leaves -->
+                <g transform="translate(180, 125)">
+                    <ellipse rx="8" ry="4" fill="url(#leafGrad)" transform="rotate(-20)"/>
+                    <ellipse rx="6" ry="3" fill="url(#leafLight)" transform="rotate(10) translate(10, -5)"/>
+                </g>
+                
+                <!-- Cheek leaves -->
+                <g transform="translate(230, 180)">
+                    <ellipse rx="7" ry="4" fill="url(#leafGrad)" transform="rotate(30)"/>
+                    <ellipse rx="5" ry="3" fill="url(#leafLight)" transform="rotate(-10) translate(8, 3)"/>
+                </g>
+                
+                <!-- Jaw leaves -->
+                <g transform="translate(170, 230)">
+                    <ellipse rx="6" ry="3" fill="url(#leafGrad)" transform="rotate(60)"/>
+                    <ellipse rx="4" ry="2" fill="url(#leafLight)" transform="rotate(80) translate(6, 0)"/>
+                </g>
+                
+                <!-- Chin leaves -->
+                <g transform="translate(190, 250)">
+                    <ellipse rx="5" ry="3" fill="url(#leafGrad)" transform="rotate(90)"/>
+                </g>
+                
+                <!-- Neck leaves -->
+                <g transform="translate(150, 260)">
+                    <ellipse rx="6" ry="3" fill="url(#leafGrad)" transform="rotate(110)"/>
+                    <ellipse rx="4" ry="2" fill="url(#leafLight)" transform="rotate(130) translate(7, -2)"/>
+                </g>
+                
+                <!-- Hair/Head leaves -->
+                <g transform="translate(140, 120)">
+                    <ellipse rx="7" ry="4" fill="url(#leafGrad)" transform="rotate(-30)"/>
+                    <ellipse rx="5" ry="3" fill="url(#leafLight)" transform="rotate(-50) translate(8, 2)"/>
+                </g>
+                
+                <g transform="translate(220, 110)">
+                    <ellipse rx="6" ry="3" fill="url(#leafGrad)" transform="rotate(10)"/>
+                    <ellipse rx="4" ry="2" fill="url(#leafLight)" transform="rotate(-10) translate(7, 1)"/>
+                </g>
+                
+                <!-- Eye detail (as a small leaf) -->
+                <g transform="translate(220, 160)">
+                    <ellipse rx="5" ry="3" fill="url(#leafLight)" transform="rotate(-15)"/>
+                    <ellipse rx="2" ry="1" fill="white" transform="translate(-1, -0.5)" opacity="0.7"/>
+                </g>
+                
+                <!-- Highlight details to give dimension -->
+                <path d="M160 140 
+                         Q180 125 200 125 
+                         Q220 125 240 140" 
+                      fill="none" 
+                      stroke="rgba(255,255,255,0.4)" 
+                      stroke-width="2" 
+                      stroke-linecap="round"/>
+                
+                <path d="M170 220 
+                         Q190 230 210 230 
+                         Q230 230 250 220" 
+                      fill="none" 
+                      stroke="rgba(255,255,255,0.3)" 
+                      stroke-width="2" 
+                      stroke-linecap="round"/>
+            </g>
+            
+            <!-- Subtle animation for the entire face -->
+            <g id="faceGroup">
+                <animateTransform 
+                    attributeName="transform" 
+                    type="translate" 
+                    values="0,0; 0,-2; 0,0" 
+                    dur="8s" 
+                    repeatCount="indefinite" />
+            </g>
+        </svg>
+        
+        <div class="logo-text">Psicoterapia</div>
+        <div class="credentials">Terapeutas con Maestría y Doctorado</div>
+        <div class="click-instruction">Haz clic para comenzar</div>
+        <div class="cta-button" id="cta-enter">Entrar</div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const logoScreen = document.getElementById('logo-screen');
             const logoClickArea = document.getElementById('logo-click-area');
             const cta = document.getElementById('cta-enter');
             
             function redirectToMainSite() {
-                // snappier fade-out animation
-                logoScreen.style.opacity = '0';
-                logoScreen.style.transform = 'scale(1.06)';
-                logoScreen.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                
-                // Redirect after fade out
-                setTimeout(function() {
-                    window.location.href = 'main.html';
-                }, 850);
+                // Simple redirect for demo purposes
+                alert('Redirigiendo al sitio principal...');
+                // In a real implementation, you would use:
+                // window.location.href = 'main.html';
             }
             
             // Add click events
             logoClickArea.addEventListener('click', redirectToMainSite);
-            cta.addEventListener('click', function(e){ e.stopPropagation(); redirectToMainSite(); });
-            
-            // Auto-redirect after 6.5 seconds for a snappier experience
-            setTimeout(function() {
-                if (window.location.href.indexOf('main.html') === -1) {
-                    redirectToMainSite();
-                }
-            }, 6500);
+            cta.addEventListener('click', function(e){ 
+                e.stopPropagation(); 
+                redirectToMainSite(); 
+            });
         });
     </script>
 </body>
