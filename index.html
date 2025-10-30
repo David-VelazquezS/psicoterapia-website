@@ -14,7 +14,7 @@
         }
         
         body {
-            background-color: #f5f5f0;
+            background: linear-gradient(135deg, #e0f7fa, #bbdefb);
             color: #2f4f4f;
             overflow-x: hidden;
             height: 100vh;
@@ -43,22 +43,44 @@
             box-shadow: 0 15px 35px rgba(31,49,49,0.15);
         }
         
-        .happy-face {
+        .face-logo {
             width: 200px;
             height: 200px;
             margin: 0 auto 20px;
-            background: #FFD87A;
-            border-radius: 50%;
             position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
+        /* Golden branch elements */
+        .branch {
+            position: absolute;
+            background: linear-gradient(to right, #d4af37, #ffd700, #d4af37);
+            border-radius: 50%;
+            transform-origin: center;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+        }
+        
+        /* Face structure */
+        .face-outline {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            z-index: 1;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Eyes */
         .eye {
             position: absolute;
             width: 30px;
             height: 40px;
             background: #2f4f4f;
             border-radius: 50%;
+            z-index: 2;
             top: 60px;
         }
         
@@ -70,6 +92,7 @@
             right: 50px;
         }
         
+        /* Smile */
         .smile {
             position: absolute;
             width: 120px;
@@ -79,6 +102,102 @@
             bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
+            z-index: 2;
+        }
+        
+        /* Branches forming the face */
+        .branch-top {
+            width: 100px;
+            height: 10px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .branch-left {
+            width: 10px;
+            height: 60px;
+            top: 50px;
+            left: 20px;
+            transform: rotate(20deg);
+        }
+        
+        .branch-right {
+            width: 10px;
+            height: 60px;
+            top: 50px;
+            right: 20px;
+            transform: rotate(-20deg);
+        }
+        
+        .branch-bottom-left {
+            width: 60px;
+            height: 10px;
+            bottom: 20px;
+            left: 30px;
+            transform: rotate(10deg);
+        }
+        
+        .branch-bottom-right {
+            width: 60px;
+            height: 10px;
+            bottom: 20px;
+            right: 30px;
+            transform: rotate(-10deg);
+        }
+        
+        .branch-nose {
+            width: 20px;
+            height: 20px;
+            background: #d4af37;
+            border-radius: 50%;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+        
+        /* Leaves */
+        .leaf {
+            position: absolute;
+            background: linear-gradient(to bottom, #2e7d32, #1b5e20);
+            border-radius: 50% 0 50% 50%;
+            z-index: 4;
+            transform-origin: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .leaf-top {
+            width: 20px;
+            height: 30px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-30deg);
+        }
+        
+        .leaf-bottom {
+            width: 25px;
+            height: 35px;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(30deg);
+        }
+        
+        .leaf-left {
+            width: 20px;
+            height: 30px;
+            top: 50px;
+            left: 10px;
+            transform: rotate(45deg);
+        }
+        
+        .leaf-right {
+            width: 20px;
+            height: 30px;
+            top: 50px;
+            right: 10px;
+            transform: rotate(-45deg);
         }
         
         .logo-text {
@@ -143,9 +262,49 @@
                 font-size: 13px;
             }
             
-            .happy-face {
+            .face-logo {
                 width: 150px;
                 height: 150px;
+            }
+            
+            .branch-top {
+                width: 75px;
+                height: 8px;
+                top: 15px;
+            }
+            
+            .branch-left {
+                width: 8px;
+                height: 45px;
+                top: 40px;
+                left: 15px;
+            }
+            
+            .branch-right {
+                width: 8px;
+                height: 45px;
+                top: 40px;
+                right: 15px;
+            }
+            
+            .branch-bottom-left {
+                width: 45px;
+                height: 8px;
+                bottom: 15px;
+                left: 25px;
+            }
+            
+            .branch-bottom-right {
+                width: 45px;
+                height: 8px;
+                bottom: 15px;
+                right: 25px;
+            }
+            
+            .branch-nose {
+                width: 15px;
+                height: 15px;
+                top: 70px;
             }
             
             .eye {
@@ -173,10 +332,29 @@
 </head>
 <body>
     <div class="logo-container" id="logo-click-area">
-        <!-- Simple happy face logo -->
-        <div class="happy-face">
+        <!-- Human face logo made of golden branches and green leaves -->
+        <div class="face-logo">
+            <div class="face-outline"></div>
+            
+            <!-- Golden branches forming the face -->
+            <div class="branch branch-top"></div>
+            <div class="branch branch-left"></div>
+            <div class="branch branch-right"></div>
+            <div class="branch branch-bottom-left"></div>
+            <div class="branch branch-bottom-right"></div>
+            <div class="branch branch-nose"></div>
+            
+            <!-- Green leaves -->
+            <div class="leaf leaf-top"></div>
+            <div class="leaf leaf-bottom"></div>
+            <div class="leaf leaf-left"></div>
+            <div class="leaf leaf-right"></div>
+            
+            <!-- Eyes -->
             <div class="eye left"></div>
             <div class="eye right"></div>
+            
+            <!-- Smile -->
             <div class="smile"></div>
         </div>
         
