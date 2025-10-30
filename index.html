@@ -18,6 +18,8 @@
             color: #2f4f4f; /* --charcoal */
             overflow-x: hidden;
             height: 100vh;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
         }
         
         /* Logo Screen Styles */
@@ -64,44 +66,75 @@
             z-index: -1;
         }
         
+        /* Make logo container look like a modern card */
         .logo-container {
-            max-width: 500px;
+            max-width: 520px;
             text-align: center;
-            padding: 20px;
+            padding: 28px;
             cursor: pointer;
-            transition: transform 0.5s ease;
+            transition: transform 0.45s cubic-bezier(.2,.9,.2,1), box-shadow 0.3s;
             z-index: 10;
+            background: rgba(255,255,255,0.85);
+            border-radius: 18px;
+            box-shadow: 0 18px 40px rgba(31,49,49,0.12), 0 6px 14px rgba(31,49,49,0.06);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
         }
-        
+
         .logo-container:hover {
-            transform: scale(1.02);
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 26px 60px rgba(31,49,49,0.16);
         }
         
+        /* Wordmark: bolder, cleaner, more commercial */
         .logo-text {
-            margin-top: 20px;
-            color: #2f4f4f; /* --charcoal */
-            font-size: 20px;
-            font-style: italic;
+            margin-top: 18px;
+            color: #163737; /* deeper charcoal-teal */
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
             opacity: 0;
-            animation: fadeIn 2s ease 1s forwards;
+            animation: fadeIn 1.6s ease 0.6s forwards;
         }
 
         .credentials {
-            margin-top: 10px;
-            color: #6b8e23; /* --sage-dark */
-            font-size: 16px;
-            font-weight: 500;
+            margin-top: 8px;
+            color: #2b7a66; /* teal-ish accent */
+            font-size: 13px;
+            font-weight: 600;
             opacity: 0;
-            animation: fadeIn 2s ease 1.5s forwards;
+            animation: fadeIn 1.6s ease 0.9s forwards;
         }
         
         .click-instruction {
-            margin-top: 30px;
-            font-size: 14px;
+            margin-top: 16px;
+            font-size: 13px;
             color: #87a96b; /* --sage */
             opacity: 0;
-            animation: fadeIn 2s ease 2s forwards;
+            animation: fadeIn 1.6s ease 1.2s forwards;
         }
+
+        /* New CTA pill */
+        .cta-button {
+            display: inline-block;
+            margin-top: 14px;
+            background: linear-gradient(180deg,#ffb58a 0%, #ff8f6a 100%); /* soft coral */
+            color: #092625;
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 8px 18px rgba(255,140,100,0.18);
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(6px);
+            animation: fadeIn 1.2s ease 1.4s forwards;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .cta-button:active { transform: translateY(1px) scale(.995); box-shadow: 0 6px 12px rgba(255,140,100,0.14); }
         
         /* Animations */
         @keyframes fadeIn {
@@ -139,23 +172,24 @@
         }
         
         @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(1deg); }
-            100% { transform: translateY(0) rotate(0deg); }
+            0% { transform: translateY(0) rotate(0deg) scale(1); }
+            50% { transform: translateY(-12px) rotate(.6deg) scale(1.02); }
+            100% { transform: translateY(0) rotate(0deg) scale(1); }
         }
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .logo-container {
-                max-width: 90%;
+                max-width: 92%;
+                padding: 18px;
             }
-            
+
             .logo-text {
                 font-size: 18px;
             }
 
             .credentials {
-                font-size: 14px;
+                font-size: 12px;
             }
         }
     </style>
@@ -169,131 +203,109 @@
         
         <!-- Logo Container -->
         <div class="logo-container" id="logo-click-area">
-            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                <!-- Define gradients using your color palette -->
+            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Psicoterapia">
                 <defs>
-                    <radialGradient id="mindGradient" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stop-color="#f5f5f0" /> <!-- --cream -->
-                        <stop offset="100%" stop-color="#e8d9c5" /> <!-- --taupe-light -->
+                    <!-- refreshed, slightly more pop colors -->
+                    <radialGradient id="mindGradient" cx="50%" cy="40%" r="60%">
+                        <stop offset="0%" stop-color="#fff6ef" />
+                        <stop offset="60%" stop-color="#ffe7d0" />
+                        <stop offset="100%" stop-color="#ffd8b8" />
                     </radialGradient>
-                    
+
                     <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#2f4f4f" /> <!-- --charcoal -->
-                        <stop offset="100%" stop-color="#6b8e23" /> <!-- --sage-dark -->
+                        <stop offset="0%" stop-color="#06c6a0" /> <!-- teal -->
+                        <stop offset="100%" stop-color="#118ab2" /> <!-- blue-teal -->
                     </linearGradient>
-                    
-                    <filter id="textureFilter" x="0" y="0" width="100%" height="100%">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" result="noise" />
-                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+
+                    <!-- glossy highlight gradient for central element -->
+                    <radialGradient id="gloss" cx="35%" cy="30%" r="70%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.95)" stop-opacity="0.95"/>
+                        <stop offset="45%" stop-color="rgba(255,255,255,0.35)" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="rgba(255,255,255,0)" stop-opacity="0"/>
+                    </radialGradient>
+
+                    <!-- stronger soft drop shadow -->
+                    <filter id="drop" x="-50%" y="-50%" width="200%" height="200%">
+                        <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#173736" flood-opacity="0.12"/>
                     </filter>
 
-                    <!-- Glow effect for central element -->
-                    <filter id="glow">
-                        <feGaussianBlur stdDeviation="3" result="blur" />
-                        <feMerge> 
-                            <feMergeNode in="blur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
+                    <!-- subtle texture but lighter -->
+                    <filter id="textureFilter" x="0" y="0" width="100%" height="100%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="1" stitchTiles="stitch" result="noise" />
+                        <feColorMatrix type="saturate" values="0" in="noise" result="mono" />
+                        <feBlend in="SourceGraphic" in2="mono" mode="overlay" />
                     </filter>
                 </defs>
-                
-                <!-- Background circle with subtle texture -->
-                <circle cx="200" cy="200" r="180" fill="url(#mindGradient)" filter="url(#textureFilter)" opacity="0.9" />
-                
-                <!-- Central element: Abstract growth/mind hybrid -->
-                <g transform="translate(200, 200)">
-                    <!-- Main stem representing personal growth -->
-                    <path d="M 0,-120 C 10,-80 10,-40 0,0 C -10,40 -10,80 0,120" 
-                          fill="none" stroke="#2f4f4f" stroke-width="4" opacity="0.8">
-                        <animate attributeName="d" 
-                                 values="M 0,-120 C 10,-80 10,-40 0,0 C -10,40 -10,80 0,120;
-                                         M 0,-120 C -10,-80 -10,-40 0,0 C 10,40 10,80 0,120;
-                                         M 0,-120 C 10,-80 10,-40 0,0 C -10,40 -10,80 0,120" 
-                                 dur="8s" repeatCount="indefinite" />
+
+                <!-- background circle -->
+                <circle cx="200" cy="200" r="170" fill="url(#mindGradient)" filter="url(#textureFilter)" opacity="0.98" />
+
+                <g transform="translate(200,200)">
+                    <!-- bolder stem -->
+                    <path d="M 0,-110 C 14,-65 18,-30 4,0 C -10,30 -14,65 0,110" fill="none" stroke="#163737" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+                        <animate attributeName="d" dur="6s" repeatCount="indefinite" values="
+                            M 0,-110 C 14,-65 18,-30 4,0 C -10,30 -14,65 0,110;
+                            M 0,-110 C -12,-60 -8,-28 6,0 C 8,32 12,68 0,110;
+                            M 0,-110 C 14,-65 18,-30 4,0 C -10,30 -14,65 0,110" />
                     </path>
-                    
-                    <!-- Growth/Support branches -->
+
+                    <!-- poppier leaves, bigger, with a small drop shadow -->
                     <g transform="rotate(-30)">
-                        <ellipse cx="0" cy="-90" rx="25" ry="15" fill="url(#leafGradient)" opacity="0.7">
-                            <animate attributeName="ry" values="15;18;15" dur="4s" repeatCount="indefinite" />
-                            <animateTransform attributeName="transform" type="rotate" values="-30;-25;-30" dur="5s" repeatCount="indefinite" />
+                        <ellipse cx="0" cy="-86" rx="34" ry="20" fill="url(#leafGradient)" opacity="0.95" filter="url(#drop)">
+                            <animate attributeName="ry" values="20;24;20" dur="4s" repeatCount="indefinite" />
+                            <animateTransform attributeName="transform" type="rotate" values="-30;-22;-30" dur="4.5s" repeatCount="indefinite" />
                         </ellipse>
                     </g>
-                    
+
                     <g transform="rotate(30)">
-                        <ellipse cx="0" cy="-90" rx="25" ry="15" fill="url(#leafGradient)" opacity="0.7">
-                            <animate attributeName="ry" values="15;18;15" dur="4s" repeatCount="indefinite" />
-                            <animateTransform attributeName="transform" type="rotate" values="30;35;30" dur="5s" repeatCount="indefinite" />
+                        <ellipse cx="0" cy="-86" rx="34" ry="20" fill="url(#leafGradient)" opacity="0.95" filter="url(#drop)">
+                            <animate attributeName="ry" values="20;24;20" dur="4s" repeatCount="indefinite" />
+                            <animateTransform attributeName="transform" type="rotate" values="30;38;30" dur="4.5s" repeatCount="indefinite" />
                         </ellipse>
                     </g>
-                    
+
                     <g transform="rotate(-60)">
-                        <ellipse cx="0" cy="-60" rx="20" ry="12" fill="url(#leafGradient)" opacity="0.7">
-                            <animate attributeName="ry" values="12;15;12" dur="3s" repeatCount="indefinite" />
-                            <animateTransform attributeName="transform" type="rotate" values="-60;-55;-60" dur="4s" repeatCount="indefinite" />
+                        <ellipse cx="0" cy="-60" rx="26" ry="14" fill="url(#leafGradient)" opacity="0.9" >
+                            <animate attributeName="ry" values="14;17;14" dur="3.2s" repeatCount="indefinite" />
                         </ellipse>
                     </g>
-                    
+
                     <g transform="rotate(60)">
-                        <ellipse cx="0" cy="-60" rx="20" ry="12" fill="url(#leafGradient)" opacity="0.7">
-                            <animate attributeName="ry" values="12;15;12" dur="3s" repeatCount="indefinite" />
-                            <animateTransform attributeName="transform" type="rotate" values="60;65;60" dur="4s" repeatCount="indefinite" />
+                        <ellipse cx="0" cy="-60" rx="26" ry="14" fill="url(#leafGradient)" opacity="0.9" >
+                            <animate attributeName="ry" values="14;17;14" dur="3.2s" repeatCount="indefinite" />
                         </ellipse>
                     </g>
-                    
-                    <!-- Central element: Breakthrough/Insight -->
-                    <g transform="translate(0, 0)" style="animation: float 6s ease-in-out infinite;" filter="url(#glow)">
-                        <circle cx="0" cy="0" r="25" fill="#6b8e23" opacity="0.8" /> <!-- --sage-dark -->
-                        <circle cx="0" cy="0" r="15" fill="#87a96b" opacity="0.7"> <!-- --sage -->
-                            <animate attributeName="r" values="15;18;15" dur="3s" repeatCount="indefinite" />
-                        </circle>
-                        
-                        <!-- Subtle pattern inside central element -->
-                        <path d="M -8,-8 L 8,8 M 8,-8 L -8,8" stroke="#b8c9a9" stroke-width="2" opacity="0.6" /> <!-- --sage-light -->
+
+                    <!-- central glossy badge -->
+                    <g transform="translate(0,0)" style="animation: float 5.6s ease-in-out infinite;" filter="url(#drop)">
+                        <circle cx="0" cy="0" r="30" fill="#06c6a0" opacity="0.98" />
+                        <circle cx="0" cy="0" r="20" fill="#07bfa0" opacity="0.98" />
+                        <ellipse cx="-6" cy="-10" rx="16" ry="10" fill="url(#gloss)" opacity="0.95"/>
+                        <path d="M -8,-8 L 8,8 M 8,-8 L -8,8" stroke="rgba(255,255,255,0.25)" stroke-width="2" opacity="0.6" />
                     </g>
-                    
-                    <!-- Therapeutic support layers -->
-                    <g transform="rotate(0)">
-                        <path d="M -120,0 Q -80,20 -40,0 Q 0,-20 40,0 Q 80,20 120,0" 
-                              fill="none" stroke="#87a96b" stroke-width="2" opacity="0.5"> <!-- --sage -->
-                            <animate attributeName="d" 
-                                     values="M -120,0 Q -80,20 -40,0 Q 0,-20 40,0 Q 80,20 120,0;
-                                             M -120,0 Q -80,-20 -40,0 Q 0,20 40,0 Q 80,-20 120,0;
-                                             M -120,0 Q -80,20 -40,0 Q 0,-20 40,0 Q 80,20 120,0" 
-                                     dur="10s" repeatCount="indefinite" />
-                        </path>
-                    </g>
-                    
-                    <g transform="rotate(90)">
-                        <path d="M -100,0 Q -60,15 -20,0 Q 20,-15 60,0 Q 100,15 140,0" 
-                              fill="none" stroke="#b8c9a9" stroke-width="1.5" opacity="0.5"> <!-- --sage-light -->
-                            <animate attributeName="d" 
-                                     values="M -100,0 Q -60,15 -20,0 Q 20,-15 60,0 Q 100,15 140,0;
-                                             M -100,0 Q -60,-15 -20,0 Q 20,15 60,0 Q 100,-15 140,0;
-                                             M -100,0 Q -60,15 -20,0 Q 20,-15 60,0 Q 100,15 140,0" 
-                                     dur="8s" repeatCount="indefinite" />
+
+                    <!-- supportive arcs simplified -->
+                    <g>
+                        <path d="M -120,0 Q -70,26 -30,0 Q 10,-26 50,0 Q 90,26 130,0" fill="none" stroke="#118ab2" stroke-width="2.2" opacity="0.55">
+                            <animate attributeName="d" dur="9s" repeatCount="indefinite" values="
+                                M -120,0 Q -70,26 -30,0 Q 10,-26 50,0 Q 90,26 130,0;
+                                M -120,0 Q -70,-26 -30,0 Q 10,26 50,0 Q 90,-26 130,0;
+                                M -120,0 Q -70,26 -30,0 Q 10,-26 50,0 Q 90,26 130,0" />
                         </path>
                     </g>
                 </g>
-                
-                <!-- Text elements aligned with your brand -->
-                <text x="200" y="320" text-anchor="middle" font-family="Georgia" font-size="24" fill="#2f4f4f" opacity="0.9">
-                    <tspan x="200" dy="0">Psicoterapia</tspan>
-                    <tspan x="200" dy="26" font-size="18" opacity="0.8">Profesional</tspan>
+
+                <!-- Stronger wordmark inside SVG for crisp export -->
+                <text x="200" y="315" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial" font-size="26" fill="#163737" font-weight="700" letter-spacing="1" opacity="0.98">
+                    <tspan x="200" dy="0">PSICOTERAPIA</tspan>
+                    <tspan x="200" dy="28" font-size="14" opacity="0.85">Profesional</tspan>
                 </text>
-                
-                <!-- Subtle decorative elements around the edges -->
-                <g opacity="0.4">
-                    <path d="M 50,50 Q 70,40 90,50" fill="none" stroke="#87a96b" stroke-width="1" />
-                    <path d="M 310,50 Q 330,40 350,50" fill="none" stroke="#87a96b" stroke-width="1" />
-                    <path d="M 50,350 Q 70,360 90,350" fill="none" stroke="#87a96b" stroke-width="1" />
-                    <path d="M 310,350 Q 330,360 350,350" fill="none" stroke="#87a96b" stroke-width="1" />
-                </g>
             </svg>
             
-            <div class="logo-text">Por una Psicoterapia Humana </div>
+            <div class="logo-text">Psicoterapia</div>
             <div class="credentials">Terapeutas con Maestría y Doctorado</div>
             <div class="click-instruction">Haz clic para comenzar</div>
+            <div class="cta-button" id="cta-enter">Entrar</div>
         </div>
     </div>
 
@@ -301,27 +313,30 @@
         document.addEventListener('DOMContentLoaded', function() {
             const logoScreen = document.getElementById('logo-screen');
             const logoClickArea = document.getElementById('logo-click-area');
+            const cta = document.getElementById('cta-enter');
             
             function redirectToMainSite() {
-                // Add fade-out animation
+                // snappier fade-out animation
                 logoScreen.style.opacity = '0';
-                logoScreen.style.transform = 'scale(1.1)';
+                logoScreen.style.transform = 'scale(1.06)';
+                logoScreen.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
                 
                 // Redirect after fade out
                 setTimeout(function() {
                     window.location.href = 'main.html';
-                }, 1000);
+                }, 850);
             }
             
-            // Add click event to logo
+            // Add click events
             logoClickArea.addEventListener('click', redirectToMainSite);
+            cta.addEventListener('click', function(e){ e.stopPropagation(); redirectToMainSite(); });
             
-            // Auto-redirect after 8 seconds
+            // Auto-redirect after 6.5 seconds for a snappier experience
             setTimeout(function() {
                 if (window.location.href.indexOf('main.html') === -1) {
                     redirectToMainSite();
                 }
-            }, 8000);
+            }, 6500);
         });
     </script>
 </body>
