@@ -203,76 +203,55 @@
         
         <!-- Logo Container -->
         <div class="logo-container" id="logo-click-area">
-            <!-- Replaced SVG: profile outline made of golden branches with leaves (inspired by provided image, not a literal copy) -->
-            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Psicoterapia — perfil hecho de ramas doradas y hojas">
+            <!-- New SVG: clear human profile made of golden branches with leaves (reads as a face, not a circle) -->
+            <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Psicoterapia — perfil rostro en ramas doradas con hojas">
                 <title>Psicoterapia — Perfil en ramas doradas</title>
                 <defs>
-                    <!-- warm gold main -->
                     <linearGradient id="goldMain" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#C69C33"/>
                         <stop offset="50%" stop-color="#E6C66A"/>
                         <stop offset="100%" stop-color="#FFD87A"/>
                     </linearGradient>
 
-                    <!-- brighter highlight -->
                     <linearGradient id="goldSheen" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stop-color="rgba(255,255,255,0.9)"/>
                         <stop offset="60%" stop-color="rgba(255,255,255,0.2)"/>
                         <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
                     </linearGradient>
 
-                    <!-- leaf green -->
                     <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#86B57B"/>
                         <stop offset="100%" stop-color="#4A8F6B"/>
                     </linearGradient>
 
-                    <!-- subtle shadow for depth -->
                     <filter id="softDrop" x="-50%" y="-50%" width="200%" height="200%">
                         <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.12"/>
                     </filter>
 
-                    <!-- soft inner glow -->
                     <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
                         <feGaussianBlur stdDeviation="4" result="b"/>
                         <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
                     </filter>
                 </defs>
 
-                <!-- faint circular backdrop for legibility -->
+                <!-- subtle circular ground for contrast -->
                 <g transform="translate(200,200)">
-                    <circle r="160" fill="rgba(255,250,245,0.96)"/>
+                    <circle r="148" fill="rgba(255,250,245,0.96)"/>
                 </g>
 
-                <g transform="translate(0,0)" filter="url(#softDrop)">
-                    <!-- base darker stroke for subtle bevel/depth -->
-                    <path d="M130 260
-                             Q140 225 154 205
-                             Q168 185 188 172
-                             Q210 160 232 162
-                             Q254 165 272 180
-                             Q286 195 286 214
-                             Q286 238 272 252
-                             Q251 269 220 280
-                             Q190 288 160 280
-                             Q140 274 130 260"
-                          fill="none"
-                          stroke="rgba(115,78,26,0.22)"
-                          stroke-width="22"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"/>
-
-                    <!-- main gold branch-outline (reads as profile) -->
-                    <path d="M130 260
-                             Q140 225 154 205
-                             Q168 185 188 172
-                             Q210 160 232 162
-                             Q254 165 272 180
-                             Q286 195 286 214
-                             Q286 238 272 252
-                             Q251 269 220 280
-                             Q190 288 160 280
-                             Q140 274 130 260"
+                <g filter="url(#softDrop)">
+                    <!-- Outer profile silhouette formed by a single flowing branch stroke -->
+                    <path d="M126 160
+                             Q144 120 184 108    /* forehead */
+                             Q206 102 230 110    /* temple */
+                             Q248 118 260 138    /* upper cheek */
+                             Q266 152 264 168    /* nose bridge */
+                             Q256 178 244 182    /* nose tip */
+                             Q232 184 222 180    /* philtrum / upper lip */
+                             Q232 196 225 208    /* lower lip */
+                             Q216 222 204 238    /* chin */
+                             Q190 258 168 274    /* jaw to neck */
+                             Q152 288 136 292"   /* base of neck */
                           fill="none"
                           stroke="url(#goldMain)"
                           stroke-width="18"
@@ -280,65 +259,78 @@
                           stroke-linejoin="round"
                           opacity="0.99"/>
 
-                    <!-- subtle highlight stroke to suggest beveled gold -->
-                    <path d="M132 257
-                             Q142 223 156 203
-                             Q170 183 190 170
-                             Q211 159 233 161
-                             Q253 164 270 178
-                             Q283 192 283 212
-                             Q283 236 270 250
-                             Q250 267 220 277
-                             Q192 285 162 277
-                             Q142 272 132 257"
+                    <!-- Highlight ridge to suggest beveled gold -->
+                    <path d="M130 156
+                             Q148 118 188 106
+                             Q210 100 234 108
+                             Q252 116 264 134
+                             Q270 148 268 164
+                             Q260 174 248 178
+                             Q236 182 226 178
+                             Q236 192 229 204
+                             Q220 218 208 234
+                             Q193 254 170 270"
                           fill="none"
                           stroke="url(#goldSheen)"
                           stroke-width="8"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          opacity="0.65"
-                          stroke-linejoin="round"/>
+                          opacity="0.7"/>
 
-                    <!-- inner branch details (smaller branch strokes to imitate the image's branching) -->
-                    <path d="M170 232
-                             Q176 215 188 202
-                             Q200 190 216 186"
+                    <!-- Inner delicate branch details (suggest bone/structure & flow) -->
+                    <path d="M170 210
+                             Q176 196 188 184
+                             Q202 172 218 168"
                           fill="none"
                           stroke="rgba(166,121,36,0.92)"
-                          stroke-width="8"
+                          stroke-width="7"
                           stroke-linecap="round"
                           stroke-linejoin="round"/>
 
-                    <path d="M200 200
-                             Q212 188 232 186"
+                    <!-- small branching offshoots (hair/temple) -->
+                    <path d="M150 140
+                             Q138 120 120 112"
                           fill="none"
-                          stroke="rgba(166,121,36,0.85)"
+                          stroke="rgba(166,121,36,0.9)"
                           stroke-width="6"
                           stroke-linecap="round"
                           stroke-linejoin="round"/>
+                    <path d="M200 110
+                             Q216 96 236 92"
+                          fill="none"
+                          stroke="rgba(166,121,36,0.85)"
+                          stroke-width="5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
 
-                    <!-- leaves along the branches (positions inspired by the image) -->
-                    <g fill="url(#leafGrad)" stroke="rgba(80,60,28,0.18)" stroke-width="0.8" opacity="0.98">
-                        <ellipse cx="150" cy="233" rx="10" ry="5" transform="rotate(-22 150 233)"/>
-                        <ellipse cx="168" cy="216" rx="11.5" ry="6" transform="rotate(-10 168 216)"/>
-                        <ellipse cx="188" cy="199" rx="11" ry="5.5" transform="rotate(8 188 199)"/>
-                        <ellipse cx="220" cy="192" rx="9.5" ry="4.5" transform="rotate(18 220 192)"/>
-                        <ellipse cx="256" cy="177" rx="11" ry="5" transform="rotate(32 256 177)"/>
-                        <ellipse cx="269" cy="199" rx="8.5" ry="4" transform="rotate(50 269 199)"/>
-                        <ellipse cx="242" cy="240" rx="10" ry="5" transform="rotate(110 242 240)"/>
-                        <ellipse cx="205" cy="258" rx="9" ry="4" transform="rotate(140 205 258)"/>
-                        <ellipse cx="162" cy="268" rx="8" ry="4" transform="rotate(165 162 268)"/>
+                    <!-- eye as a small leaf-shaped element -->
+                    <g transform="translate(232,150) rotate(-12)">
+                        <ellipse cx="0" cy="0" rx="9" ry="5.5" fill="url(#leafGrad)" stroke="rgba(80,60,28,0.14)" stroke-width="0.6"/>
+                        <ellipse cx="-2" cy="-1.5" rx="3" ry="1.8" fill="rgba(255,255,255,0.25)" opacity="0.6"/>
                     </g>
 
-                    <!-- tiny warm accents (buds) to add human warmth -->
+                    <!-- Leaves placed along key branch points -->
+                    <g fill="url(#leafGrad)" stroke="rgba(80,60,28,0.15)" stroke-width="0.7" opacity="0.98">
+                        <ellipse cx="154" cy="136" rx="11" ry="6" transform="rotate(-30 154 136)"/>
+                        <ellipse cx="178" cy="122" rx="9" ry="4.5" transform="rotate(-18 178 122)"/>
+                        <ellipse cx="204" cy="118" rx="10" ry="5" transform="rotate(-6 204 118)"/>
+                        <ellipse cx="242" cy="130" rx="12" ry="5.5" transform="rotate(6 242 130)"/>
+                        <ellipse cx="260" cy="150" rx="9" ry="4" transform="rotate(18 260 150)"/>
+                        <ellipse cx="268" cy="170" rx="8" ry="4" transform="rotate(36 268 170)"/>
+                        <ellipse cx="246" cy="206" rx="10" ry="5" transform="rotate(90 246 206)"/>
+                        <ellipse cx="214" cy="230" rx="9" ry="4" transform="rotate(120 214 230)"/>
+                        <ellipse cx="176" cy="250" rx="8" ry="4" transform="rotate(150 176 250)"/>
+                    </g>
+
+                    <!-- tiny warm accents (buds) for human warmth -->
                     <g opacity="0.95">
-                        <circle cx="274" cy="182" r="3.8" fill="#FFB78F"/>
-                        <circle cx="238" cy="246" r="2.8" fill="#FFE1B8"/>
+                        <circle cx="268" cy="168" r="3.6" fill="#FFB78F"/>
+                        <circle cx="232" cy="218" r="2.6" fill="#FFE1B8"/>
                     </g>
                 </g>
 
-                <!-- gentle living motion: a very subtle float on the whole mark -->
-                <g id="markGroup" transform="translate(0,0)">
+                <!-- gentle living motion for the mark -->
+                <g id="markGroup">
                     <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="4.6s" repeatCount="indefinite" />
                 </g>
             </svg>
